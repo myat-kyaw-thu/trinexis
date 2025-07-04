@@ -192,7 +192,7 @@ export function Navbar() {
                   className="bg-[#005c4a] hover:bg-[#005236] active:bg-[#00463b] dark:bg-[#005c46] dark:hover:bg-[#005c4a] dark:active:bg-[#005236] h-9 flex items-center justify-center text-sm font-medium tracking-wide rounded-xl text-white px-6 transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
                   href="#"
                 >
-                  Try for free
+                  Contact Us
                 </Link>
               </div>
 
@@ -269,7 +269,7 @@ export function Navbar() {
                   href="#"
                   className="bg-[#005c4a] hover:bg-[#005236] active:bg-[#00463b] dark:bg-[#005c46] dark:hover:bg-[#005c4a] dark:active:bg-[#005236] h-11 flex items-center justify-center text-sm font-medium tracking-wide rounded-xl text-white w-full transition-all duration-200 hover:scale-[1.01] active:scale-[0.99]"
                 >
-                  Try for free
+                  Contact Us
                 </Link>
               </div>
             </div>

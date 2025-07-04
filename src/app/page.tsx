@@ -1,3 +1,4 @@
+import { HeroSection } from '@/components/sections/hero';
 import { Navbar } from '@/components/sections/navbar';
 
 export default function Home() {
@@ -5,9 +6,7 @@ export default function Home() {
     <>
       <div>
         <Navbar />
-        <div className='h-[2000px]'>
-          <h1 className='text-green-500'>header</h1>
-        </div>
+        <HeroSection />
       </div>
     </>
   );
