@@ -1,21 +1,18 @@
-
-import type { LucideProps } from "lucide-react";
+import Image from "next/image";
 
 export const Icons = {
-  logo: (props: LucideProps) => (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      {...props}
-    >
-      <path d="M12 2L2 7l10 5 10-5-10-5z" />
-      <path d="M2 17l10 5 10-5" />
-      <path d="M2 12l10 5 10-5" />
-    </svg>
+  logo: ({ className, ...props }: React.ComponentProps<"div">) => (
+    <div className={className} {...props}>
+      <Image
+        src="/logo.png"
+        alt="Trinexis Logo"
+        width={44}
+        height={44}
+        className="w-full h-full object-contain"
+        style={{
+          filter: 'brightness(0) saturate(100%) invert(27%) sepia(73%) saturate(1347%) hue-rotate(134deg) brightness(95%) contrast(101%)'
+        }}
+      />
+    </div>
   ),
-}
-
+};

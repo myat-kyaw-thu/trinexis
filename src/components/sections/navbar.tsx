@@ -12,7 +12,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 const INITIAL_WIDTH = "70rem";
-const MAX_WIDTH = "850px";
+const MAX_WIDTH = "800px";
 
 function NavMenuComponent() {
   const [activeSection, setActiveSection] = useState("hero");
@@ -161,11 +161,17 @@ export function Navbar() {
               : "px-8",
           )}
         >
-          <div className="flex h-[60px] ps-6 items-center justify-between">
+          <div className="ps-6 flex h-[60px] items-center justify-between">
             {/* Logo Section */}
-            <Link href="/" className="flex items-center gap-3 group shrink-0">
+            <Link href="/" className="flex items-center group shrink-0">
               <div className="relative">
-                <Icons.logo className="size-8 md:size-9 text-[#005c4a] dark:text-[#b0d0c8] transition-all duration-200 group-hover:text-[#005236] dark:group-hover:text-[#d9e8e4]" />
+                <Icons.logo
+                  className="size-10 transition-all duration-200 group-hover:scale-105"
+                  style={{
+                    filter:
+                      "brightness(0) saturate(100%) invert(27%) sepia(73%) saturate(1347%) hue-rotate(134deg) brightness(95%) contrast(101%)",
+                  }}
+                />
               </div>
               <div className="hidden sm:block">
                 <p className="text-xl font-bold text-[#005c4a] dark:text-[#e6f0ed] tracking-tight group-hover:text-[#005236] dark:group-hover:text-white transition-colors duration-200">
@@ -180,7 +186,7 @@ export function Navbar() {
             </div>
 
             {/* Right Section */}
-            <div className="pe-6 flex items-center gap-3 shrink-0">
+            <div className="flex items-center gap-3 shrink-0 pe-6">
               <div className="hidden md:flex">
                 <Link
                   className="bg-[#005c4a] hover:bg-[#005236] active:bg-[#00463b] dark:bg-[#005c46] dark:hover:bg-[#005c4a] dark:active:bg-[#005236] h-9 flex items-center justify-center text-sm font-medium tracking-wide rounded-xl text-white px-6 transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
@@ -215,9 +221,15 @@ export function Navbar() {
           <div className="fixed inset-0 bg-[#00463b]/60 backdrop-blur-sm z-40" onClick={() => setIsDrawerOpen(false)} />
           <div className="fixed inset-x-0 w-[92%] mx-auto bottom-4 bg-[#e6f0ed] dark:bg-[#00463b] border border-[#d9e8e4] dark:border-[#00342f] p-5 rounded-2xl z-50">
             <div className="flex flex-col gap-5">
-              <div className="flex items-center justify-between">
-                <Link href="/" className="flex items-center gap-3 group">
-                  <Icons.logo className="size-8 text-[#005c4a] dark:text-[#b0d0c8] group-hover:text-[#005236] dark:group-hover:text-[#d9e8e4] transition-colors duration-200" />
+              <div className="flex items-center">
+                <Link href="/" className="flex items-center group">
+                  <Icons.logo
+                    className="transition-colors duration-200 group-hover:scale-105"
+                    style={{
+                      filter:
+                        "brightness(0) saturate(100%) invert(27%) sepia(73%) saturate(1347%) hue-rotate(134deg) brightness(95%) contrast(101%)",
+                    }}
+                  />
                   <p className="text-lg font-bold text-[#005c4a] dark:text-[#e6f0ed] tracking-tight group-hover:text-[#005236] dark:group-hover:text-white transition-colors duration-200">
                     Trinexis
                   </p>
